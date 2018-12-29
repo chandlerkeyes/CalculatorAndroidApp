@@ -55,15 +55,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/button2"
             android:minWidth="48dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button3" app:layout_constraintStart_toEndOf="@+id/button3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button1" app:layout_constraintStart_toEndOf="@+id/button1"
             android:layout_marginStart="8dp"/>
     <Button
             android:text="@string/_3"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button1" app:layout_constraintStart_toEndOf="@+id/button1"
-            android:layout_marginStart="8dp"/>
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            android:layout_marginStart="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/button2"/>
     <Button
             android:text="@string/_4"
             android:layout_width="wrap_content"
@@ -128,8 +128,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonMinus"
             android:minWidth="48dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button2" app:layout_constraintStart_toEndOf="@+id/button2"
-            android:layout_marginStart="8dp"/>
+            app:layout_constraintStart_toEndOf="@+id/button3"
+            android:layout_marginStart="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/button3"/>
     <Button
             android:text="@string/additionSymbol"
             android:layout_width="wrap_content"
