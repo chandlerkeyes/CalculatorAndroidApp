@@ -11,8 +11,6 @@ private const val STATE_PENDING_OPERATION = "PendingOperation"
 private const val STATE_OPERAND1 = "Operand1"
 private const val STATE_OPERAND1_STORED = "Operand1_Stored"
 
-
-
 class MainActivity : AppCompatActivity() {
     //operands
     private var operand1: Double? = null
@@ -57,6 +55,20 @@ class MainActivity : AppCompatActivity() {
         buttonPlus.setOnClickListener(opListener)
         buttonMultiply.setOnClickListener(opListener)
         buttonMinus.setOnClickListener(opListener)
+        buttonNeg.setOnClickListener({ view ->
+            val value = newNumber.text.toString()
+            if (value.isEmpty()) {
+                newNumber.setText("-")
+            } else {
+                try {
+                    var doubleValue = value.toDouble()
+                    doubleValue *= -1
+                    newNumber.setText(doubleValue.toString())
+                } catch (e: NumberFormatException) {}
+                // newNumber was "-" or ".", so clear it
+                newNumber.setText("")
+            }
+        })
     }
 
     private fun performOperation(operation: String, value: Double) {
